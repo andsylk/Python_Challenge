@@ -4,7 +4,7 @@
 import os
 import csv
 
-#define date and revenue lists
+#create date and revenue lists
 date = []
 revenue = []
 
