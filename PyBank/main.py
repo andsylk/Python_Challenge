@@ -73,8 +73,7 @@ min_value = min(combined_data_dict.values())
 min_date = min(combined_data_dict, key=combined_data_dict.get)
 
 
-
-#---------SUMMARY OF RESULTS
+#---------SUMMARY OF RESULTS 
 print('')
 print("Financial Analysis")
 print("-----------------------------------")
@@ -84,3 +83,18 @@ print("Average Revenue Change:  " + "$" +str(avg_rev_change))
 print("Greatest Increase in Revenue:  " + max_date + " ($" + str(max_value) + ")")
 print("Greatest Decrease in Revenue:  " + min_date + " ($" + str(min_value) + ")")
 print('')
+
+#----------EXPORT RESULTS TO TEXT FILE
+with open('budget_summary.txt','w', newline = '') as outfile:
+    print('', file = outfile)
+    print("Financial Analysis", file = outfile)
+    print("-----------------------------------", file = outfile)
+    print("Total Months: " + str(len(unique_count_months)), file = outfile)
+    print("Total Revenue:  " + "$" +str(total_rev), file = outfile)
+    print("Average Revenue Change:  " + "$" +str(avg_rev_change), file = outfile)
+    print("Greatest Increase in Revenue:  " + max_date + " ($" + str(max_value) + ")", file = outfile)
+    print("Greatest Decrease in Revenue:  " + min_date + " ($" + str(min_value) + ")", file = outfile)
+    print('')
+
+
+
