@@ -77,3 +77,20 @@ print("-----------------------")
 print("Winner:  " + winning_candidate)
 print("-----------------------")
 print('')
+
+#----------EXPORT RESULTS TO TEXT FILE
+with open('poll_results.txt','w', newline = '') as outfile:
+    print('', file = outfile)
+    print("Election Results", file = outfile)
+    print("-----------------------", file = outfile)
+    print("Total Votes: " + ": " +  str(total_votes), file = outfile)
+    print("-----------------------", file = outfile)
+    print(candidate_names[0] + ": " + str(candidate1_perc) + "% " + " (" + str(candidate1_votes) + ")" , file = outfile)
+    print(candidate_names[1] + ": " + str(candidate2_perc) + "% " + " (" + str(candidate2_votes) + ")" , file = outfile)
+    print(candidate_names[2] + ": " + str(candidate3_perc) + "% " + " (" + str(candidate3_votes) + ")" , file = outfile)
+    print(candidate_names[3] + ": " + str(candidate4_perc) + "% " + " (" + str(candidate4_votes) + ")" , file = outfile)
+    print("-----------------------", file = outfile)
+    print("Winner:  " + winning_candidate, file = outfile)
+    print("-----------------------", file = outfile)
+    print('')
+
