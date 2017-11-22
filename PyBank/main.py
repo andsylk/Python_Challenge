@@ -50,9 +50,11 @@ for z in range(len(revenue)):
 
 
 #---------AVERAGE CHANGE IN REVENUE (calc)
-avg_rev_change = int(sum(total_rev_diff)/len(revenue))
+#total sum of differences over the total number of differences.  This is one less than total number of months.
+avg_rev_change = int(sum(total_rev_diff)/(len(revenue)-1))
 
 #insert 0 to the 'all_rev_diff' so that when combined with 'date' list, total rows will match
+#also, the first difference starts at the 2nd month, not the 1st month.
 #use zip function to get a list of tuples
 total_rev_diff.insert(0,0)
 combined_data = zip(date,total_rev_diff)
