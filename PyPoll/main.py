@@ -8,7 +8,7 @@ candidates = []
 
 
 #read in csv file and append relevant column into list
-with open('election_data_2.csv', newline = '') as file:
+with open('election_data_1.csv', newline = '') as file:
     election_data = csv.reader(file, delimiter = ',')
     next(election_data)
     for line in election_data:
