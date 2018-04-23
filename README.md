@@ -1,5 +1,4 @@
 ## Python-Challenge
-### HW-3 
 
 #### PyBank
 Created a Python script for analyzing the financial records given two sets of revenue data (budget_data_1.csv and budget_data_2.csv)
